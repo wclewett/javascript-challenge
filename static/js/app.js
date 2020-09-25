@@ -48,7 +48,7 @@ button.on("click", function(event) {
         .append("tr")
         .append("td")
           .attr("colspan", 7)
-          .html("<h4>No Records Found</h4>");
+          .html("<h4>No Results Match</h4>");
     };
   
     console.log(filteredData);
@@ -56,10 +56,10 @@ button.on("click", function(event) {
   });
 
 // Field Object
-var field = d3.select("#datetime");
+var fieldDate = d3.select("#datetime");
 
 // Add On Enter Functionality
-field.on("keypress", function(event) {
+fieldDate.on("keypress", function(event) {
     if(d3.event.keyCode === 32 || d3.event.keyCode === 13){
         d3.event.preventDefault();
         deleteTBody();
@@ -80,7 +80,7 @@ field.on("keypress", function(event) {
             .append("tr")
             .append("td")
               .attr("colspan", 7)
-              .html("<h4>No Records Found</h4>");
+              .html("<h4>No Results Match</h4>");
         };
       
         console.log(filteredData);
